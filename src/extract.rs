@@ -170,7 +170,7 @@ pub fn extract_person() -> Result<Person, String> {
                                     }
                                     b"key" => {
                                         item_tag.key = attr_value;
-                                    },
+                                    }
                                     _ => (),
                                 }
                             }
