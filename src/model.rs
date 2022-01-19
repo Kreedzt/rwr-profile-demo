@@ -1,11 +1,13 @@
-#[derive(Debug)]
+use serde::{Serialize};
+
+#[derive(Debug, Serialize)]
 pub struct StashItemTag {
     pub class: i8,
     pub index: i32,
     pub key: String,
 }
 
-#[derive(Debug)]
+#[derive(Debug, Serialize)]
 pub struct ItemTag {
     pub slot: i8,
     pub index: i32,
@@ -13,14 +15,14 @@ pub struct ItemTag {
     pub key: String,
 }
 
-#[derive(Debug)]
+#[derive(Debug, Serialize)]
 pub struct OrderTag {
     pub moving: i32,
     pub target: String,
     pub class: i8,
 }
 
-#[derive(Debug)]
+#[derive(Debug, Serialize)]
 pub struct Person {
     pub max_authority_reached: f32,
     pub authority: f32,
