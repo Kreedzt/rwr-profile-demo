@@ -10,23 +10,23 @@ fn main() {
 
     println!("{:?}", p);
 
-    println!("=========extract person completed===============");
     println!("================================================");
+    println!("=========extract person completed===============");
     println!("================================================");
 
     let xml_res = save_person(&p).unwrap();
 
     println!("{}", xml_res);
 
-    println!("==========xml save completed===============");
     println!("===========================================");
+    println!("==========xml save completed===============");
     println!("===========================================");
 
     save_to_file(&xml_res);
 
+    println!("{}", serde_json::to_string(&p).unwrap());
+
+    println!("===========================================");
     println!("==========json send completed==============");
     println!("===========================================");
-    println!("===========================================");
-
-    println!("{}", serde_json::to_string(&p).unwrap());
 }
